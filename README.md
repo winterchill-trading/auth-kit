@@ -151,6 +151,9 @@ names are listed in a test, so renaming one fails the build.
 
 ## Development
 
+See `AGENTS.md` for the agent guide.
+
+
 ```sh
 dune build @all @runtest
 dune build @fmt --auto-promote
