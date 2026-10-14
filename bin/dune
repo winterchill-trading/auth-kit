@@ -1,0 +1,7 @@
+(executable
+ (name main)
+ (public_name auth-kit)
+ (package auth-kit)
+ (libraries auth-kit auth-kit.hash core core_unix core_unix.command_unix)
+ (preprocess
+  (pps ppx_jane)))
