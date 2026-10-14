@@ -162,3 +162,9 @@ dune build @fmt --auto-promote
 CI installs `libargon2-dev`, pins service-kit (used by the tests only), builds the
 examples, runs the tests and the cram test of the CLI, and builds the docs with
 warnings as errors.
+
+## Releasing
+
+Move the `Unreleased` entries in `CHANGES.md` under the new version heading, then tag.
+CI builds the API docs with warnings as errors (`dune build @doc`), so run that locally
+before tagging. The docs step installs `result` next to `odoc`, which does not declare it.
