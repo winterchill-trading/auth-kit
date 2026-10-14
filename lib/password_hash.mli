@@ -113,6 +113,7 @@ module Hasher : sig
   (** The scheme new hashes are made with. *)
   val target : t -> Scheme.t
 
+  (** The limits stored hashes and targets are checked against. *)
   val limits : t -> Limits.t
 
   (** A copy hashing new secrets with another scheme. *)

@@ -21,6 +21,7 @@ module Ip_prefix : sig
       suffix [%eth0] is ignored) and keeps its prefix. [None] for anything else. *)
   val of_address : string -> t option
 
+  (** The prefix as text, for storage and display. *)
   val to_string : t -> string
 end
 

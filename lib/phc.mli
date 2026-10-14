@@ -32,6 +32,7 @@ val param : t -> string -> string option
 
 (** Standard base64 (RFC 4648 section 4) without padding, as PHC strings use it. *)
 module B64 : sig
+  (** Encodes without padding. *)
   val encode : string -> string
 
   (** Refuses padding, characters outside the alphabet, a length of 1 modulo 4, and

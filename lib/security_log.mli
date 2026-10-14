@@ -72,8 +72,10 @@ module Entry : sig
   [@@deriving sexp_of, compare, equal]
 end
 
+(** One account's log, oldest entry first. *)
 type t [@@deriving sexp_of]
 
+(** A log with no entries. *)
 val empty : t
 
 (** Appends an entry with the next sequence number. Raises if [at] is earlier than the
@@ -90,6 +92,7 @@ val append
 (** Every entry, oldest first. *)
 val entries : t -> Entry.t list
 
+(** The number of entries. *)
 val length : t -> int
 
 (** The newest [limit] entries, newest first. Raises unless [1 <= limit <= 200]. *)

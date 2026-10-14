@@ -59,6 +59,7 @@ module Status : sig
   [@@deriving sexp_of, compare, equal]
 end
 
+(** The record's state at [now], as an account settings screen shows it. *)
 val status : Config.t -> t -> now:Time_ns.t -> Status.t
 
 (** Whether a passcode is set (locked or not). Services typically ask for step-up
@@ -151,7 +152,10 @@ module Reset_proof : sig
   (** [challenge_id] identifies the accepted code, for the audit trail. *)
   val of_verified_code : challenge_id:string -> verified_at:Time_ns.t -> t
 
+  (** The accepted code's challenge id. *)
   val challenge_id : t -> string
+
+  (** When the code was accepted. *)
   val verified_at : t -> Time_ns.t
 end
 
