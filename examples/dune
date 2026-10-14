@@ -1,0 +1,7 @@
+; Examples are built with the rest of the project (and so in CI) but not installed.
+
+(executables
+ (names quick_start)
+ (libraries auth-kit auth-kit.hash core)
+ (preprocess
+  (pps ppx_jane)))
