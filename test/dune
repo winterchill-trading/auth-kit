@@ -1,6 +1,6 @@
 (library
  (name auth_kit_test)
- (libraries auth-kit core)
+ (libraries auth-kit auth-kit.hash core)
  (inline_tests
   (flags
    (:standard -source-tree-root .)))
