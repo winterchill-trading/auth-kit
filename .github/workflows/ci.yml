@@ -17,6 +17,7 @@ jobs:
             service-kit https://github.com/winterchill-trading/service-kit.git
       - run: opam exec -- dune build
       - run: opam exec -- dune build @examples/all
+      - run: opam exec -- dune exec ./examples/quick_start.exe
       - run: opam exec -- dune test
       - run: opam install -y odoc
       - name: Build API docs (odoc warnings fail the step)
